@@ -22,6 +22,7 @@
 		EC8E283E1FA5CF5C00EE4244 /* NSString+encrypto.m in Sources */ = {isa = PBXBuildFile; fileRef = EC8E28371FA5CF5C00EE4244 /* NSString+encrypto.m */; };
 		EC8E283F1FA5CF5C00EE4244 /* UIColor+hex.m in Sources */ = {isa = PBXBuildFile; fileRef = EC8E28391FA5CF5C00EE4244 /* UIColor+hex.m */; };
 		EC8E28441FA6067000EE4244 /* NetworkUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = EC8E28431FA6067000EE4244 /* NetworkUtils.m */; };
+		EC8E28471FA60D8700EE4244 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC8E28461FA60D8700EE4244 /* TableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,8 @@
 		EC8E283C1FA5CF5C00EE4244 /* Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Helper.h; sourceTree = "<group>"; };
 		EC8E28421FA6067000EE4244 /* NetworkUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkUtils.h; sourceTree = "<group>"; };
 		EC8E28431FA6067000EE4244 /* NetworkUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkUtils.m; sourceTree = "<group>"; };
+		EC8E28451FA60D8700EE4244 /* TableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		EC8E28461FA60D8700EE4244 /* TableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +179,8 @@
 			children = (
 				EC8E282B1FA5CE6800EE4244 /* ViewController.h */,
 				EC8E282C1FA5CE6800EE4244 /* ViewController.m */,
+				EC8E28451FA60D8700EE4244 /* TableViewController.h */,
+				EC8E28461FA60D8700EE4244 /* TableViewController.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -521,6 +526,7 @@
 				EC8E283E1FA5CF5C00EE4244 /* NSString+encrypto.m in Sources */,
 				EC8E28311FA5CE6800EE4244 /* AppDelegate.m in Sources */,
 				EC8E283D1FA5CF5C00EE4244 /* Helper.m in Sources */,
+				EC8E28471FA60D8700EE4244 /* TableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
