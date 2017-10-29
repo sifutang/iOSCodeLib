@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "Helper.h"
 
 @interface ViewController ()
 
@@ -16,14 +17,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
 }
 
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [Helper showAlertWithOneAction:self title:@"Title" message:@"some thing" actionTitle:@"OK" handler:nil];
 }
-
 
 @end

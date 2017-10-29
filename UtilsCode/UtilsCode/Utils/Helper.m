@@ -146,7 +146,6 @@
 }
 
 + (void)removeNavigationBarBottomLine:(UIViewController *)target {
-    //Remove NavigationBar Bottom Line
     [target.navigationController.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
     target.navigationController.navigationBar.shadowImage = [UIImage new];
 }

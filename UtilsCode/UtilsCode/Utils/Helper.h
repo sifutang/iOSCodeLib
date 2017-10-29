@@ -16,7 +16,6 @@
 + (NSDate *)localDateFromRowDate:(NSDate *)date;
 
 + (NSDate *)localDateFromString:(NSString *)dateStr;
-//+ (NSArray *)filterStringArray:(NSArray *)array byKey:(NSString *)key;
 
 + (NSString *)jsonStringWithDictionary:(NSDictionary *)dict;
 
