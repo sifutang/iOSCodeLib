@@ -8,15 +8,52 @@
 
 #import "NetworkUtils.h"
 #import "AFNetworking.h"
+#import "Micro.h"
 
 @implementation NetworkUtils
+
++ (void)monitoringNetworkState:(void (^)(NSInteger))block{
+    
+    AFNetworkReachabilityManager *manager = [AFNetworkReachabilityManager sharedManager];
+    [manager startMonitoring];
+    [manager setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
+        switch (status) {
+            case AFNetworkReachabilityStatusUnknown:
+            {
+                //未知网络
+                Log(@"[网络状态切换]--未知网络");
+            }
+                break;
+            case AFNetworkReachabilityStatusNotReachable:
+            {
+                //无法联网
+                Log(@"[网络状态切换]--无法联网");
+            }
+                break;
+                
+            case AFNetworkReachabilityStatusReachableViaWWAN:
+            {
+                //手机自带网络
+                Log(@"[网络状态切换]--当前使用的是2g/3g/4g网络");
+            }
+                break;
+            case AFNetworkReachabilityStatusReachableViaWiFi:
+            {
+                //WIFI
+                Log(@"[网络状态切换]--当前在WIFI网络下");
+            }
+                
+        }
+        block(status);
+    }];
+}
 
 + (void)jsonPost:(NSString *)url
       params:(NSDictionary *)params
      success:(void (^)(NSDictionary *responseObject))success
      failure:(void (^)(NSError *error))failure {
     
-    NSLog(@"request url: %@=========params: %@", url, params);
+    Log(@"request url: %@=========params: %@", url, params);
     
     AFHTTPSessionManager *session = [AFHTTPSessionManager manager];
     session.requestSerializer = [AFJSONRequestSerializer serializer];
@@ -37,7 +74,7 @@
         success:(void (^)(id response))success
         failure:(void (^)(NSError *))failure {
     
-    NSLog(@"request url: %@=========params: %@", url, params);
+    Log(@"request url: %@=========params: %@", url, params);
     
     AFHTTPSessionManager *session = [AFHTTPSessionManager manager];
     AFJSONRequestSerializer *requestSerializer = [AFJSONRequestSerializer serializer];

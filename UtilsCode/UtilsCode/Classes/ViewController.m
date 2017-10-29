@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "Helper.h"
+#import "Micro.h"
 
 @interface ViewController ()
 
@@ -17,6 +18,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    Log("hello");
 }
 
 

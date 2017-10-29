@@ -21,6 +21,12 @@
 
 + (NSDictionary *)jsonDictWithString:(NSString *)string;
 
++ (BOOL)isValidateEmail:(NSString *)email;
+
++ (BOOL)isValidateMobile:(NSString *)mobile;
+
++ (BOOL)isValidateCarNum:(NSString*)carNo;
+
 + (BOOL)isValidIdCardNum:(NSString *)cardNumber;
 
 + (BOOL)isPureInt:(NSString *)string;
